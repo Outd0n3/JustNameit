@@ -1,0 +1,81 @@
+<% layout('layouts/boilerplate')%>
+<div class="row">
+    <h1 class="text-center">New Partner</h1>
+    <div class="col-6 offset-3">
+        <form action="/campgrounds" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">Name</label>
+                <input class="form-control" type="text" id="title" name="campground[title]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Location</label>
+                <input class="form-control" type="text" id="location" name="campground[location]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <!-- <div class="mb-3">
+                <label class="form-label" for="image">Image Url</label>
+                <input class="form-control" type="text" id="image" name="campground[image]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div> -->
+            <!-- <div class="mb-3">
+                <label class="form-label" for="price">Object Height</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">ft</span>
+                    <input type="text" class="form-control" id="price" placeholder="0.00" aria-label=""
+                        aria-describedby="" name="campground[price]" required>
+                </div>
+                <div class="valid-feedback">
+                    Looks good!
+                </div> -->
+            </div>
+            <div class="mb-3">
+                <label for=""></label>
+                <select class="form-select" name="campground[type]" aria-label="">
+                    <option selected>Partner Type</option>
+                    <option value="education">Education</option>
+                    <option value="sports">Sports</option>
+                    <option value="club">Club</option>
+                    <option value="llc">LLC</option>
+                  </select>
+            </div>
+<!-- NEW crew -----------------------------------------------------------------------------------------------!!!!!!!!
+            <div class="mb-3">
+                <label for=""></label>
+                <select class="form-select" name="campground[type]" aria-label="">
+                    <option selected>Object Type</option>
+                    <option value="building">Building</option>
+                    <option value="antena">Antena</option>
+                    <option value="span">Span</option>
+                    <option value="earth">Earth</option>
+                  </select>
+            </div> -->
+
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="campground[description]"
+                    required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="image" class="form-label">Upload Image(s)</label>
+                <input class="form-control" type="file" id="image" name="image" multiple>
+              
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Create Partner</button>
+            </div>
+        </form>
+        <a href="/campgrounds">All Partners</a>
+    </div>
+</div>
